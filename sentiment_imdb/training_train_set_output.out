@@ -1,0 +1,575 @@
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLM-L3-H384-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
+25000
+c0=12500, c1=12500
+batch size= 50
+num of epochs per fold= 3
+num of folds= 5
+fold1
+/home/s249403/miniconda3/envs/torch-paddleseg/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+begin
+train
+epoch_cnt=0
+/home/s249403/projects/sentiment/sentiment_analysis_L3.py:41: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.724
+validation prec=0.6504567436861902
+validation rec= 0.9684
+validation f1=  0.7782063645130184
+validation tnr= 0.4796
+tp=2421, fp=1301, fn=79, tn=1199, total occurances=5000
+best validation acc so far fold_1_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.794
+validation prec=0.7265721331689272
+validation rec= 0.9428
+validation f1=  0.8206824512534819
+validation tnr= 0.6452
+tp=2357, fp=887, fn=143, tn=1613, total occurances=5000
+best validation acc so far fold_1_epoch_2
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7746
+validation prec=0.698009806749351
+validation rec= 0.968
+validation f1=  0.8111278699513994
+validation tnr= 0.5812
+tp=2420, fp=1047, fn=80, tn=1453, total occurances=5000
+fold2
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7618
+validation prec=0.6801541425818882
+validation rec= 0.9884
+validation f1=  0.8058046632969184
+validation tnr= 0.5352
+tp=2471, fp=1162, fn=29, tn=1338, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7286
+validation prec=0.6514709780015903
+validation rec= 0.9832
+validation f1=  0.7836760720548382
+validation tnr= 0.474
+tp=2458, fp=1315, fn=42, tn=1185, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7256
+validation prec=0.6484210526315789
+validation rec= 0.9856
+validation f1=  0.7822222222222223
+validation tnr= 0.4656
+tp=2464, fp=1336, fn=36, tn=1164, total occurances=5000
+fold3
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8564
+validation prec=0.7805415617128464
+validation rec= 0.9916
+validation f1=  0.8735024665257224
+validation tnr= 0.7212
+tp=2479, fp=697, fn=21, tn=1803, total occurances=5000
+best validation acc so far fold_3_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8584
+validation prec=0.7835443037974683
+validation rec= 0.9904
+validation f1=  0.8749116607773851
+validation tnr= 0.7264
+tp=2476, fp=684, fn=24, tn=1816, total occurances=5000
+best validation acc so far fold_3_epoch_2
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7976
+validation prec=0.7128146453089245
+validation rec= 0.9968
+validation f1=  0.8312208138759173
+validation tnr= 0.5984
+tp=2492, fp=1004, fn=8, tn=1496, total occurances=5000
+fold4
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8278
+validation prec=0.7448461308634599
+validation rec= 0.9972
+validation f1=  0.8527449974345819
+validation tnr= 0.6584
+tp=2493, fp=854, fn=7, tn=1646, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.83
+validation prec=0.7471539844218095
+validation rec= 0.9976
+validation f1=  0.8544021925316889
+validation tnr= 0.6624
+tp=2494, fp=844, fn=6, tn=1656, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7622
+validation prec=0.6778833107191317
+validation rec= 0.9992
+validation f1=  0.8077607113985449
+validation tnr= 0.5252
+tp=2498, fp=1187, fn=2, tn=1313, total occurances=5000
+fold5
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8956
+validation prec=0.8274834437086093
+validation rec= 0.9996
+validation f1=  0.9054347826086956
+validation tnr= 0.7916
+tp=2499, fp=521, fn=1, tn=1979, total occurances=5000
+best validation acc so far fold_5_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.886
+validation prec=0.8147423352902805
+validation rec= 0.9992
+validation f1=  0.8975925260510241
+validation tnr= 0.7728
+tp=2498, fp=568, fn=2, tn=1932, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8864
+validation prec=0.8167213114754098
+validation rec= 0.9964
+validation f1=  0.8976576576576577
+validation tnr= 0.7764
+tp=2491, fp=559, fn=9, tn=1941, total occurances=5000
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLM-L6-H384-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
+25000
+c0=12500, c1=12500
+batch size= 50
+num of epochs per fold= 3
+num of folds= 5
+fold1
+/home/s249403/miniconda3/envs/torch-paddleseg/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+begin
+train
+epoch_cnt=0
+/home/s249403/projects/sentiment/sentiment_analysis_L6.py:41: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7278
+validation prec=0.6538773304512294
+validation rec= 0.968
+validation f1=  0.7805192710853088
+validation tnr= 0.4876
+tp=2420, fp=1281, fn=80, tn=1219, total occurances=5000
+best validation acc so far fold_1_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7584
+validation prec=0.6800445930880713
+validation rec= 0.976
+validation f1=  0.8015768725361366
+validation tnr= 0.5408
+tp=2440, fp=1148, fn=60, tn=1352, total occurances=5000
+best validation acc so far fold_1_epoch_2
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.7894
+validation prec=0.7153914855611789
+validation rec= 0.9612
+validation f1=  0.8202764976958525
+validation tnr= 0.6176
+tp=2403, fp=956, fn=97, tn=1544, total occurances=5000
+best validation acc so far fold_1_epoch_3
+fold2
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.786
+validation prec=0.7016356457980824
+validation rec= 0.9952
+validation f1=  0.8230234866027125
+validation tnr= 0.5768
+tp=2488, fp=1058, fn=12, tn=1442, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8308
+validation prec=0.7558787128712872
+validation rec= 0.9772
+validation f1=  0.852407536636427
+validation tnr= 0.6844
+tp=2443, fp=789, fn=57, tn=1711, total occurances=5000
+best validation acc so far fold_2_epoch_2
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.833
+validation prec=0.7548209366391184
+validation rec= 0.9864
+validation f1=  0.8552106814634992
+validation tnr= 0.6796
+tp=2466, fp=801, fn=34, tn=1699, total occurances=5000
+best validation acc so far fold_2_epoch_3
+fold3
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9138
+validation prec=0.8646457525555163
+validation rec= 0.9812
+validation f1=  0.9192430204234588
+validation tnr= 0.8464
+tp=2453, fp=384, fn=47, tn=2116, total occurances=5000
+best validation acc so far fold_3_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8406
+validation prec=0.7587359465208143
+validation rec= 0.9988
+validation f1=  0.8623726472111897
+validation tnr= 0.6824
+tp=2497, fp=794, fn=3, tn=1706, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.858
+validation prec=0.7796875
+validation rec= 0.998
+validation f1=  0.8754385964912281
+validation tnr= 0.718
+tp=2495, fp=705, fn=5, tn=1795, total occurances=5000
+fold4
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.776
+validation prec=0.6906077348066298
+validation rec= 1.0
+validation f1=  0.8169934640522877
+validation tnr= 0.552
+tp=2500, fp=1120, fn=0, tn=1380, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8382
+validation prec=0.7555152614082804
+validation rec= 1.0
+validation f1=  0.8607333448097779
+validation tnr= 0.6764
+tp=2500, fp=809, fn=0, tn=1691, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.828
+validation prec=0.7440476190476191
+validation rec= 1.0
+validation f1=  0.8532423208191127
+validation tnr= 0.656
+tp=2500, fp=860, fn=0, tn=1640, total occurances=5000
+fold5
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8574
+validation prec=0.7782622236063531
+validation rec= 0.9996
+validation f1=  0.875153213097531
+validation tnr= 0.7152
+tp=2499, fp=712, fn=1, tn=1788, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.818
+validation prec=0.733274647887324
+validation rec= 0.9996
+validation f1=  0.8459715639810427
+validation tnr= 0.6364
+tp=2499, fp=909, fn=1, tn=1591, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8712
+validation prec=0.795729764181007
+validation rec= 0.9988
+validation f1=  0.8857750975523234
+validation tnr= 0.7436
+tp=2497, fp=641, fn=3, tn=1859, total occurances=5000
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at microsoft/MiniLM-L12-H384-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
+25000
+c0=12500, c1=12500
+batch size= 50
+num of epochs per fold= 3
+num of folds= 5
+fold1
+/home/s249403/miniconda3/envs/torch-paddleseg/lib/python3.10/site-packages/transformers/optimization.py:391: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+begin
+train
+epoch_cnt=0
+/home/s249403/projects/sentiment/sentiment_analysis_L12.py:41: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.911
+validation prec=0.8801331853496115
+validation rec= 0.9516
+validation f1=  0.914472419757832
+validation tnr= 0.8704
+tp=2379, fp=324, fn=121, tn=2176, total occurances=5000
+best validation acc so far fold_1_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.902
+validation prec=0.8594420600858369
+validation rec= 0.9612
+validation f1=  0.9074773413897281
+validation tnr= 0.8428
+tp=2403, fp=393, fn=97, tn=2107, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9014
+validation prec=0.8592910848549946
+validation rec= 0.96
+validation f1=  0.9068581144908369
+validation tnr= 0.8428
+tp=2400, fp=393, fn=100, tn=2107, total occurances=5000
+fold2
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9618
+validation prec=0.941491395793499
+validation rec= 0.9848
+validation f1=  0.9626588465298143
+validation tnr= 0.9388
+tp=2462, fp=153, fn=38, tn=2347, total occurances=5000
+best validation acc so far fold_2_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9408
+validation prec=0.9021897810218978
+validation rec= 0.9888
+validation f1=  0.9435114503816794
+validation tnr= 0.8928
+tp=2472, fp=268, fn=28, tn=2232, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.944
+validation prec=0.9086892488954345
+validation rec= 0.9872
+validation f1=  0.946319018404908
+validation tnr= 0.9008
+tp=2468, fp=248, fn=32, tn=2252, total occurances=5000
+fold3
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9722
+validation prec=0.9535151747983096
+validation rec= 0.9928
+validation f1=  0.972761120909269
+validation tnr= 0.9516
+tp=2482, fp=121, fn=18, tn=2379, total occurances=5000
+best validation acc so far fold_3_epoch_1
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.947
+validation prec=0.907103825136612
+validation rec= 0.996
+validation f1=  0.9494756911344137
+validation tnr= 0.898
+tp=2490, fp=255, fn=10, tn=2245, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.946
+validation prec=0.9051598837209303
+validation rec= 0.9964
+validation f1=  0.9485910129474485
+validation tnr= 0.8956
+tp=2491, fp=261, fn=9, tn=2239, total occurances=5000
+fold4
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.9064
+validation prec=0.8427800269905533
+validation rec= 0.9992
+validation f1=  0.9143484626647145
+validation tnr= 0.8136
+tp=2498, fp=466, fn=2, tn=2034, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8796
+validation prec=0.8061290322580645
+validation rec= 0.9996
+validation f1=  0.8925
+validation tnr= 0.7596
+tp=2499, fp=601, fn=1, tn=1899, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8988
+validation prec=0.8359164420485176
+validation rec= 0.9924
+validation f1=  0.9074615947329919
+validation tnr= 0.8052
+tp=2481, fp=487, fn=19, tn=2013, total occurances=5000
+fold5
+begin
+train
+epoch_cnt=0
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.827
+validation prec=0.7432311811960726
+validation rec= 0.9992
+validation f1=  0.8524142637775123
+validation tnr= 0.6548
+tp=2498, fp=863, fn=2, tn=1637, total occurances=5000
+train
+epoch_cnt=1
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8812
+validation prec=0.8084142394822007
+validation rec= 0.9992
+validation f1=  0.8937388193202146
+validation tnr= 0.7632
+tp=2498, fp=592, fn=2, tn=1908, total occurances=5000
+train
+epoch_cnt=2
+batch_cnt=0
+batch_cnt=200
+eval
+validation acc= 0.8038
+validation prec=0.7185611510791367
+validation rec= 0.9988
+validation f1=  0.83581589958159
+validation tnr= 0.6088
+tp=2497, fp=978, fn=3, tn=1522, total occurances=5000

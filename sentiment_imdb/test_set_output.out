@@ -1,45 +1,58 @@
 import model
-Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLM-L3-H384-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLM-L3-H384-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-load model /home/s249403/projects/sentiment/sentiment_model_L3_fold_5.pt
+load model /home/s249403/projects/sentiment/sentiment_model_best_acc_L3_fold_5_epoch_1_acc_0.8956.pt
 loading dataset
 Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
 embedding
 begin eval
 /home/s249403/projects/sentiment/sentiment_val_L3.py:34: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
-validation acc= 0.63496
-validation prec=0.5851332256762213
-validation rec= 0.9276
-validation f1=  0.7176011882658746
-validation tnr= 0.34232
+###############################################################
+L3
+validation acc= 0.78816
+validation prec=0.7331693423096841
+validation rec= 0.90608
+validation f1=  0.8105052239874051
+validation tnr= 0.67024
+tp: 11326, fp: 4122, fn: 1174, tn: 8378
+###############################################################
 import model
 Some weights of BertForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLM-L6-H384-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-load model /home/s249403/projects/sentiment/sentiment_model_L6_fold_5.pt
+load model /home/s249403/projects/sentiment/sentiment_model_best_acc_L6_fold_3_epoch_1_acc_0.9138.pt
 loading dataset
 Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
 embedding
 begin eval
 /home/s249403/projects/sentiment/sentiment_val_L6.py:34: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
-validation acc= 0.79648
-validation prec=0.7267498776309349
-validation rec= 0.95024
-validation f1=  0.8236028290112328
-validation tnr= 0.64272
+
+###############################################################
+L6
+validation acc= 0.8494
+validation prec=0.8157761550140987
+validation rec= 0.90264
+validation f1=  0.857012646690213
+validation tnr= 0.79616
+tp: 11283, fp: 2548, fn: 1217, tn: 9952
+###############################################################
 import model
-Some weights of BertForSequenceClassification were not initialized from the model checkpoint at microsoft/MiniLM-L12-H384-uncased and are newly initialized: ['classifier.weight', 'classifier.bias']
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at microsoft/MiniLM-L12-H384-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
 You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
-load model /home/s249403/projects/sentiment/sentiment_model_L12_fold_5.pt
+load model /home/s249403/projects/sentiment/sentiment_model_best_acc_L12_fold_3_epoch_1_acc_0.9722.pt
 loading dataset
 Found cached dataset imdb (/home/s249403/.cache/huggingface/datasets/imdb/plain_text/1.0.0/d613c88cf8fa3bab83b4ded3713f1f74830d1100e171db75bbddb80b3345c9c0)
 embedding
 begin eval
 /home/s249403/projects/sentiment/sentiment_val_L12.py:34: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
   item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
-validation acc= 0.8466
-validation prec=0.7791379421429032
-validation rec= 0.96744
-validation f1=  0.8631383605153279
-validation tnr= 0.72576
+###############################################################
+L12
+validation acc= 0.91244
+validation prec=0.8947852056053297
+validation rec= 0.9348
+validation f1=  0.9143550217144646
+validation tnr= 0.89008
+tp: 11685, fp: 1374, fn: 815, tn: 11126
+###############################################################

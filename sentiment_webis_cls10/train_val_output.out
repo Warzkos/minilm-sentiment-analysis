@@ -1,0 +1,396 @@
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at microsoft/Multilingual-MiniLM-L12-H384 and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at nreimers/mMiniLMv2-L12-H384-distilled-from-XLMR-Large were not used when initializing XLMRobertaForSequenceClassification: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing XLMRobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of XLMRobertaForSequenceClassification were not initialized from the model checkpoint at nreimers/mMiniLMv2-L12-H384-distilled-from-XLMR-Large and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of the model checkpoint at nreimers/MiniLMv2-L6-H384-distilled-from-RoBERTa-Large were not used when initializing RobertaForSequenceClassification: ['lm_head.bias', 'lm_head.dense.bias', 'lm_head.dense.weight', 'lm_head.layer_norm.weight', 'lm_head.layer_norm.bias']
+- This IS expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing RobertaForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of RobertaForSequenceClassification were not initialized from the model checkpoint at nreimers/MiniLMv2-L6-H384-distilled-from-RoBERTa-Large and are newly initialized: ['classifier.dense.weight', 'classifier.out_proj.bias', 'classifier.out_proj.weight', 'classifier.dense.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+model name: miniLM_L12, dataset: X_en_y_en
+fold: 0, epoch: 0
+acc: 0.843, pre: 0.799, rec: 0.915, f1s: 0.853, tnr: 0.770, tp: 366, tn: 308, fp: 92, fn: 34, sum: 800
+fold: 0, epoch: 1
+acc: 0.890, pre: 0.919, rec: 0.855, f1s: 0.886, tnr: 0.925, tp: 342, tn: 370, fp: 30, fn: 58, sum: 800
+fold: 0, epoch: 2
+acc: 0.848, pre: 0.769, rec: 0.993, f1s: 0.867, tnr: 0.703, tp: 397, tn: 281, fp: 119, fn: 3, sum: 800
+fold: 1, epoch: 0
+acc: 0.939, pre: 0.983, rec: 0.892, f1s: 0.936, tnr: 0.985, tp: 357, tn: 394, fp: 6, fn: 43, sum: 800
+fold: 1, epoch: 1
+acc: 0.890, pre: 0.820, rec: 1.000, f1s: 0.901, tnr: 0.780, tp: 400, tn: 312, fp: 88, fn: 0, sum: 800
+fold: 1, epoch: 2
+acc: 0.854, pre: 0.774, rec: 1.000, f1s: 0.872, tnr: 0.708, tp: 400, tn: 283, fp: 117, fn: 0, sum: 800
+fold: 2, epoch: 0
+acc: 0.950, pre: 0.979, rec: 0.920, f1s: 0.948, tnr: 0.980, tp: 368, tn: 392, fp: 8, fn: 32, sum: 800
+fold: 2, epoch: 1
+acc: 0.939, pre: 0.978, rec: 0.897, f1s: 0.936, tnr: 0.980, tp: 359, tn: 392, fp: 8, fn: 41, sum: 800
+fold: 2, epoch: 2
+acc: 0.955, pre: 0.925, rec: 0.990, f1s: 0.957, tnr: 0.920, tp: 396, tn: 368, fp: 32, fn: 4, sum: 800
+fold: 3, epoch: 0
+acc: 0.865, pre: 1.000, rec: 0.730, f1s: 0.844, tnr: 1.000, tp: 292, tn: 400, fp: 0, fn: 108, sum: 800
+fold: 3, epoch: 1
+acc: 0.884, pre: 0.813, rec: 0.998, f1s: 0.896, tnr: 0.770, tp: 399, tn: 308, fp: 92, fn: 1, sum: 800
+fold: 3, epoch: 2
+acc: 0.850, pre: 0.996, rec: 0.703, f1s: 0.824, tnr: 0.998, tp: 281, tn: 399, fp: 1, fn: 119, sum: 800
+fold: 4, epoch: 0
+acc: 0.845, pre: 0.996, rec: 0.693, f1s: 0.817, tnr: 0.998, tp: 277, tn: 399, fp: 1, fn: 123, sum: 800
+fold: 4, epoch: 1
+acc: 0.968, pre: 0.982, rec: 0.953, f1s: 0.967, tnr: 0.983, tp: 381, tn: 393, fp: 7, fn: 19, sum: 800
+fold: 4, epoch: 2
+acc: 0.956, pre: 0.995, rec: 0.917, f1s: 0.954, tnr: 0.995, tp: 367, tn: 398, fp: 2, fn: 33, sum: 800
+start_time: 08:59:03.794360, end_time: 09:11:54.626486, time_diff: 0:12:50.832126
+model name: miniLMv2_L12, dataset: X_en_y_en
+fold: 0, epoch: 0
+acc: 0.767, pre: 0.866, rec: 0.632, f1s: 0.731, tnr: 0.902, tp: 253, tn: 361, fp: 39, fn: 147, sum: 800
+fold: 0, epoch: 1
+acc: 0.830, pre: 0.768, rec: 0.945, f1s: 0.848, tnr: 0.715, tp: 378, tn: 286, fp: 114, fn: 22, sum: 800
+fold: 0, epoch: 2
+acc: 0.811, pre: 0.730, rec: 0.988, f1s: 0.840, tnr: 0.635, tp: 395, tn: 254, fp: 146, fn: 5, sum: 800
+fold: 1, epoch: 0
+acc: 0.911, pre: 0.916, rec: 0.905, f1s: 0.911, tnr: 0.917, tp: 362, tn: 367, fp: 33, fn: 38, sum: 800
+fold: 1, epoch: 1
+acc: 0.929, pre: 0.913, rec: 0.948, f1s: 0.930, tnr: 0.910, tp: 379, tn: 364, fp: 36, fn: 21, sum: 800
+fold: 1, epoch: 2
+acc: 0.818, pre: 0.735, rec: 0.993, f1s: 0.845, tnr: 0.642, tp: 397, tn: 257, fp: 143, fn: 3, sum: 800
+fold: 2, epoch: 0
+acc: 0.912, pre: 0.910, rec: 0.915, f1s: 0.913, tnr: 0.910, tp: 366, tn: 364, fp: 36, fn: 34, sum: 800
+fold: 2, epoch: 1
+acc: 0.910, pre: 0.923, rec: 0.895, f1s: 0.909, tnr: 0.925, tp: 358, tn: 370, fp: 30, fn: 42, sum: 800
+fold: 2, epoch: 2
+acc: 0.938, pre: 0.923, rec: 0.955, f1s: 0.939, tnr: 0.920, tp: 382, tn: 368, fp: 32, fn: 18, sum: 800
+fold: 3, epoch: 0
+acc: 0.948, pre: 0.928, rec: 0.970, f1s: 0.949, tnr: 0.925, tp: 388, tn: 370, fp: 30, fn: 12, sum: 800
+fold: 3, epoch: 1
+acc: 0.891, pre: 0.825, rec: 0.993, f1s: 0.901, tnr: 0.790, tp: 397, tn: 316, fp: 84, fn: 3, sum: 800
+fold: 3, epoch: 2
+acc: 0.948, pre: 0.950, rec: 0.945, f1s: 0.947, tnr: 0.950, tp: 378, tn: 380, fp: 20, fn: 22, sum: 800
+fold: 4, epoch: 0
+acc: 0.917, pre: 0.863, rec: 0.993, f1s: 0.923, tnr: 0.843, tp: 397, tn: 337, fp: 63, fn: 3, sum: 800
+fold: 4, epoch: 1
+acc: 0.767, pre: 0.683, rec: 1.000, f1s: 0.811, tnr: 0.535, tp: 400, tn: 214, fp: 186, fn: 0, sum: 800
+fold: 4, epoch: 2
+acc: 0.814, pre: 0.729, rec: 0.998, f1s: 0.843, tnr: 0.630, tp: 399, tn: 252, fp: 148, fn: 1, sum: 800
+start_time: 09:11:54.649396, end_time: 09:24:46.389670, time_diff: 0:12:51.740274
+model name: miniLMv2_L6, dataset: X_en_y_en
+fold: 0, epoch: 0
+acc: 0.874, pre: 0.886, rec: 0.858, f1s: 0.872, tnr: 0.890, tp: 343, tn: 356, fp: 44, fn: 57, sum: 800
+fold: 0, epoch: 1
+acc: 0.906, pre: 0.860, rec: 0.970, f1s: 0.912, tnr: 0.843, tp: 388, tn: 337, fp: 63, fn: 12, sum: 800
+fold: 0, epoch: 2
+acc: 0.919, pre: 0.868, rec: 0.988, f1s: 0.924, tnr: 0.850, tp: 395, tn: 340, fp: 60, fn: 5, sum: 800
+fold: 1, epoch: 0
+acc: 0.949, pre: 0.909, rec: 0.998, f1s: 0.951, tnr: 0.900, tp: 399, tn: 360, fp: 40, fn: 1, sum: 800
+fold: 1, epoch: 1
+acc: 0.979, pre: 0.964, rec: 0.995, f1s: 0.979, tnr: 0.963, tp: 398, tn: 385, fp: 15, fn: 2, sum: 800
+fold: 1, epoch: 2
+acc: 0.948, pre: 0.969, rec: 0.925, f1s: 0.946, tnr: 0.970, tp: 370, tn: 388, fp: 12, fn: 30, sum: 800
+fold: 2, epoch: 0
+acc: 0.958, pre: 0.922, rec: 1.000, f1s: 0.959, tnr: 0.915, tp: 400, tn: 366, fp: 34, fn: 0, sum: 800
+fold: 2, epoch: 1
+acc: 0.956, pre: 0.921, rec: 0.998, f1s: 0.958, tnr: 0.915, tp: 399, tn: 366, fp: 34, fn: 1, sum: 800
+fold: 2, epoch: 2
+acc: 0.948, pre: 0.905, rec: 1.000, f1s: 0.950, tnr: 0.895, tp: 400, tn: 358, fp: 42, fn: 0, sum: 800
+fold: 3, epoch: 0
+acc: 0.974, pre: 0.954, rec: 0.995, f1s: 0.974, tnr: 0.953, tp: 398, tn: 381, fp: 19, fn: 2, sum: 800
+fold: 3, epoch: 1
+acc: 0.983, pre: 0.966, rec: 1.000, f1s: 0.983, tnr: 0.965, tp: 400, tn: 386, fp: 14, fn: 0, sum: 800
+fold: 3, epoch: 2
+acc: 0.943, pre: 0.897, rec: 1.000, f1s: 0.946, tnr: 0.885, tp: 400, tn: 354, fp: 46, fn: 0, sum: 800
+fold: 4, epoch: 0
+acc: 0.968, pre: 0.939, rec: 1.000, f1s: 0.969, tnr: 0.935, tp: 400, tn: 374, fp: 26, fn: 0, sum: 800
+fold: 4, epoch: 1
+acc: 0.993, pre: 0.985, rec: 1.000, f1s: 0.993, tnr: 0.985, tp: 400, tn: 394, fp: 6, fn: 0, sum: 800
+fold: 4, epoch: 2
+acc: 0.983, pre: 0.966, rec: 1.000, f1s: 0.983, tnr: 0.965, tp: 400, tn: 386, fp: 14, fn: 0, sum: 800
+start_time: 09:24:46.398089, end_time: 09:31:12.558659, time_diff: 0:06:26.160570
+model name: miniLM_L12, dataset: X_jp_y_jp
+fold: 0, epoch: 0
+acc: 0.762, pre: 0.907, rec: 0.585, f1s: 0.711, tnr: 0.940, tp: 234, tn: 376, fp: 24, fn: 166, sum: 800
+fold: 0, epoch: 1
+acc: 0.848, pre: 0.868, rec: 0.820, f1s: 0.843, tnr: 0.875, tp: 328, tn: 350, fp: 50, fn: 72, sum: 800
+fold: 0, epoch: 2
+acc: 0.823, pre: 0.852, rec: 0.780, f1s: 0.815, tnr: 0.865, tp: 312, tn: 346, fp: 54, fn: 88, sum: 800
+fold: 1, epoch: 0
+acc: 0.929, pre: 0.967, rec: 0.887, f1s: 0.926, tnr: 0.970, tp: 355, tn: 388, fp: 12, fn: 45, sum: 800
+fold: 1, epoch: 1
+acc: 0.821, pre: 0.974, rec: 0.660, f1s: 0.787, tnr: 0.983, tp: 264, tn: 393, fp: 7, fn: 136, sum: 800
+fold: 1, epoch: 2
+acc: 0.873, pre: 0.807, rec: 0.980, f1s: 0.885, tnr: 0.765, tp: 392, tn: 306, fp: 94, fn: 8, sum: 800
+fold: 2, epoch: 0
+acc: 0.917, pre: 0.913, rec: 0.922, f1s: 0.918, tnr: 0.912, tp: 369, tn: 365, fp: 35, fn: 31, sum: 800
+fold: 2, epoch: 1
+acc: 0.874, pre: 0.802, rec: 0.993, f1s: 0.887, tnr: 0.755, tp: 397, tn: 302, fp: 98, fn: 3, sum: 800
+fold: 2, epoch: 2
+acc: 0.899, pre: 0.954, rec: 0.838, f1s: 0.892, tnr: 0.960, tp: 335, tn: 384, fp: 16, fn: 65, sum: 800
+fold: 3, epoch: 0
+acc: 0.910, pre: 0.857, rec: 0.985, f1s: 0.916, tnr: 0.835, tp: 394, tn: 334, fp: 66, fn: 6, sum: 800
+fold: 3, epoch: 1
+acc: 0.912, pre: 0.997, rec: 0.828, f1s: 0.904, tnr: 0.998, tp: 331, tn: 399, fp: 1, fn: 69, sum: 800
+fold: 3, epoch: 2
+acc: 0.934, pre: 0.924, rec: 0.945, f1s: 0.934, tnr: 0.922, tp: 378, tn: 369, fp: 31, fn: 22, sum: 800
+fold: 4, epoch: 0
+acc: 0.820, pre: 0.978, rec: 0.655, f1s: 0.784, tnr: 0.985, tp: 262, tn: 394, fp: 6, fn: 138, sum: 800
+fold: 4, epoch: 1
+acc: 0.839, pre: 0.761, rec: 0.988, f1s: 0.860, tnr: 0.690, tp: 395, tn: 276, fp: 124, fn: 5, sum: 800
+fold: 4, epoch: 2
+acc: 0.941, pre: 0.954, rec: 0.927, f1s: 0.940, tnr: 0.955, tp: 371, tn: 382, fp: 18, fn: 29, sum: 800
+start_time: 09:31:12.572661, end_time: 09:44:02.538199, time_diff: 0:12:49.965538
+model name: miniLMv2_L12, dataset: X_jp_y_jp
+fold: 0, epoch: 0
+acc: 0.635, pre: 0.922, rec: 0.295, f1s: 0.447, tnr: 0.975, tp: 118, tn: 390, fp: 10, fn: 282, sum: 800
+fold: 0, epoch: 1
+acc: 0.721, pre: 0.932, rec: 0.477, f1s: 0.631, tnr: 0.965, tp: 191, tn: 386, fp: 14, fn: 209, sum: 800
+fold: 0, epoch: 2
+acc: 0.854, pre: 0.864, rec: 0.840, f1s: 0.852, tnr: 0.868, tp: 336, tn: 347, fp: 53, fn: 64, sum: 800
+fold: 1, epoch: 0
+acc: 0.740, pre: 0.971, rec: 0.495, f1s: 0.656, tnr: 0.985, tp: 198, tn: 394, fp: 6, fn: 202, sum: 800
+fold: 1, epoch: 1
+acc: 0.831, pre: 0.891, rec: 0.755, f1s: 0.817, tnr: 0.907, tp: 302, tn: 363, fp: 37, fn: 98, sum: 800
+fold: 1, epoch: 2
+acc: 0.848, pre: 0.957, rec: 0.728, f1s: 0.827, tnr: 0.968, tp: 291, tn: 387, fp: 13, fn: 109, sum: 800
+fold: 2, epoch: 0
+acc: 0.830, pre: 0.989, rec: 0.667, f1s: 0.797, tnr: 0.993, tp: 267, tn: 397, fp: 3, fn: 133, sum: 800
+fold: 2, epoch: 1
+acc: 0.814, pre: 0.963, rec: 0.652, f1s: 0.778, tnr: 0.975, tp: 261, tn: 390, fp: 10, fn: 139, sum: 800
+fold: 2, epoch: 2
+acc: 0.877, pre: 0.955, rec: 0.792, f1s: 0.866, tnr: 0.963, tp: 317, tn: 385, fp: 15, fn: 83, sum: 800
+fold: 3, epoch: 0
+acc: 0.848, pre: 0.983, rec: 0.708, f1s: 0.823, tnr: 0.988, tp: 283, tn: 395, fp: 5, fn: 117, sum: 800
+fold: 3, epoch: 1
+acc: 0.846, pre: 0.963, rec: 0.720, f1s: 0.824, tnr: 0.973, tp: 288, tn: 389, fp: 11, fn: 112, sum: 800
+fold: 3, epoch: 2
+acc: 0.892, pre: 0.944, rec: 0.835, f1s: 0.886, tnr: 0.950, tp: 334, tn: 380, fp: 20, fn: 66, sum: 800
+fold: 4, epoch: 0
+acc: 0.800, pre: 0.958, rec: 0.627, f1s: 0.758, tnr: 0.973, tp: 251, tn: 389, fp: 11, fn: 149, sum: 800
+fold: 4, epoch: 1
+acc: 0.820, pre: 0.989, rec: 0.647, f1s: 0.782, tnr: 0.993, tp: 259, tn: 397, fp: 3, fn: 141, sum: 800
+fold: 4, epoch: 2
+acc: 0.877, pre: 0.949, rec: 0.797, f1s: 0.867, tnr: 0.958, tp: 319, tn: 383, fp: 17, fn: 81, sum: 800
+start_time: 09:44:02.551979, end_time: 09:56:53.182401, time_diff: 0:12:50.630422
+model name: miniLMv2_L6, dataset: X_jp_y_jp
+fold: 0, epoch: 0
+acc: 0.500, pre: 0.500, rec: 1.000, f1s: 0.667, tnr: 0.000, tp: 400, tn: 0, fp: 400, fn: 0, sum: 800
+fold: 0, epoch: 1
+acc: 0.500, pre: 0.500, rec: 1.000, f1s: 0.667, tnr: 0.000, tp: 400, tn: 0, fp: 400, fn: 0, sum: 800
+fold: 0, epoch: 2
+acc: 0.500, pre: -1.000, rec: 0.000, f1s: -1.000, tnr: 1.000, tp: 0, tn: 400, fp: 0, fn: 400, sum: 800
+fold: 1, epoch: 0
+acc: 0.534, pre: 0.524, rec: 0.725, f1s: 0.609, tnr: 0.343, tp: 290, tn: 137, fp: 263, fn: 110, sum: 800
+fold: 1, epoch: 1
+acc: 0.500, pre: -1.000, rec: 0.000, f1s: -1.000, tnr: 1.000, tp: 0, tn: 400, fp: 0, fn: 400, sum: 800
+fold: 1, epoch: 2
+acc: 0.500, pre: -1.000, rec: 0.000, f1s: -1.000, tnr: 1.000, tp: 0, tn: 400, fp: 0, fn: 400, sum: 800
+fold: 2, epoch: 0
+acc: 0.515, pre: 0.559, rec: 0.142, f1s: 0.227, tnr: 0.887, tp: 57, tn: 355, fp: 45, fn: 343, sum: 800
+fold: 2, epoch: 1
+acc: 0.525, pre: 0.527, rec: 0.480, f1s: 0.503, tnr: 0.570, tp: 192, tn: 228, fp: 172, fn: 208, sum: 800
+fold: 2, epoch: 2
+acc: 0.545, pre: 0.643, rec: 0.203, f1s: 0.308, tnr: 0.887, tp: 81, tn: 355, fp: 45, fn: 319, sum: 800
+fold: 3, epoch: 0
+acc: 0.634, pre: 0.606, rec: 0.765, f1s: 0.676, tnr: 0.502, tp: 306, tn: 201, fp: 199, fn: 94, sum: 800
+fold: 3, epoch: 1
+acc: 0.636, pre: 0.662, rec: 0.557, f1s: 0.605, tnr: 0.715, tp: 223, tn: 286, fp: 114, fn: 177, sum: 800
+fold: 3, epoch: 2
+acc: 0.659, pre: 0.658, rec: 0.660, f1s: 0.659, tnr: 0.657, tp: 264, tn: 263, fp: 137, fn: 136, sum: 800
+fold: 4, epoch: 0
+acc: 0.676, pre: 0.654, rec: 0.748, f1s: 0.698, tnr: 0.605, tp: 299, tn: 242, fp: 158, fn: 101, sum: 800
+fold: 4, epoch: 1
+acc: 0.670, pre: 0.783, rec: 0.470, f1s: 0.587, tnr: 0.870, tp: 188, tn: 348, fp: 52, fn: 212, sum: 800
+fold: 4, epoch: 2
+acc: 0.718, pre: 0.730, rec: 0.690, f1s: 0.710, tnr: 0.745, tp: 276, tn: 298, fp: 102, fn: 124, sum: 800
+start_time: 09:56:53.190395, end_time: 10:03:19.197574, time_diff: 0:06:26.007179
+model name: miniLM_L12, dataset: X_fr_y_fr
+fold: 0, epoch: 0
+acc: 0.682, pre: 0.618, rec: 0.958, f1s: 0.751, tnr: 0.407, tp: 383, tn: 163, fp: 237, fn: 17, sum: 800
+fold: 0, epoch: 1
+acc: 0.693, pre: 0.622, rec: 0.983, f1s: 0.762, tnr: 0.403, tp: 393, tn: 161, fp: 239, fn: 7, sum: 800
+fold: 0, epoch: 2
+acc: 0.800, pre: 0.724, rec: 0.970, f1s: 0.829, tnr: 0.630, tp: 388, tn: 252, fp: 148, fn: 12, sum: 800
+fold: 1, epoch: 0
+acc: 0.701, pre: 0.626, rec: 1.000, f1s: 0.770, tnr: 0.403, tp: 400, tn: 161, fp: 239, fn: 0, sum: 800
+fold: 1, epoch: 1
+acc: 0.849, pre: 0.776, rec: 0.980, f1s: 0.866, tnr: 0.718, tp: 392, tn: 287, fp: 113, fn: 8, sum: 800
+fold: 1, epoch: 2
+acc: 0.797, pre: 0.713, rec: 0.995, f1s: 0.831, tnr: 0.600, tp: 398, tn: 240, fp: 160, fn: 2, sum: 800
+fold: 2, epoch: 0
+acc: 0.700, pre: 0.625, rec: 1.000, f1s: 0.769, tnr: 0.400, tp: 400, tn: 160, fp: 240, fn: 0, sum: 800
+fold: 2, epoch: 1
+acc: 0.755, pre: 0.671, rec: 1.000, f1s: 0.803, tnr: 0.510, tp: 400, tn: 204, fp: 196, fn: 0, sum: 800
+fold: 2, epoch: 2
+acc: 0.879, pre: 0.950, rec: 0.800, f1s: 0.868, tnr: 0.958, tp: 320, tn: 383, fp: 17, fn: 80, sum: 800
+fold: 3, epoch: 0
+acc: 0.754, pre: 0.672, rec: 0.993, f1s: 0.801, tnr: 0.515, tp: 397, tn: 206, fp: 194, fn: 3, sum: 800
+fold: 3, epoch: 1
+acc: 0.790, pre: 0.972, rec: 0.598, f1s: 0.740, tnr: 0.983, tp: 239, tn: 393, fp: 7, fn: 161, sum: 800
+fold: 3, epoch: 2
+acc: 0.848, pre: 0.963, rec: 0.723, f1s: 0.826, tnr: 0.973, tp: 289, tn: 389, fp: 11, fn: 111, sum: 800
+fold: 4, epoch: 0
+acc: 0.899, pre: 0.960, rec: 0.833, f1s: 0.892, tnr: 0.965, tp: 333, tn: 386, fp: 14, fn: 67, sum: 800
+fold: 4, epoch: 1
+acc: 0.844, pre: 0.762, rec: 1.000, f1s: 0.865, tnr: 0.688, tp: 400, tn: 275, fp: 125, fn: 0, sum: 800
+fold: 4, epoch: 2
+acc: 0.713, pre: 1.000, rec: 0.425, f1s: 0.596, tnr: 1.000, tp: 170, tn: 400, fp: 0, fn: 230, sum: 800
+start_time: 10:03:19.211091, end_time: 10:16:09.408396, time_diff: 0:12:50.197305
+model name: miniLMv2_L12, dataset: X_fr_y_fr
+fold: 0, epoch: 0
+acc: 0.598, pre: 0.556, rec: 0.965, f1s: 0.706, tnr: 0.230, tp: 386, tn: 92, fp: 308, fn: 14, sum: 800
+fold: 0, epoch: 1
+acc: 0.745, pre: 0.673, rec: 0.955, f1s: 0.789, tnr: 0.535, tp: 382, tn: 214, fp: 186, fn: 18, sum: 800
+fold: 0, epoch: 2
+acc: 0.666, pre: 0.601, rec: 0.990, f1s: 0.748, tnr: 0.343, tp: 396, tn: 137, fp: 263, fn: 4, sum: 800
+fold: 1, epoch: 0
+acc: 0.836, pre: 0.816, rec: 0.868, f1s: 0.841, tnr: 0.805, tp: 347, tn: 322, fp: 78, fn: 53, sum: 800
+fold: 1, epoch: 1
+acc: 0.637, pre: 0.580, rec: 0.998, f1s: 0.733, tnr: 0.278, tp: 399, tn: 111, fp: 289, fn: 1, sum: 800
+fold: 1, epoch: 2
+acc: 0.680, pre: 0.611, rec: 0.990, f1s: 0.756, tnr: 0.370, tp: 396, tn: 148, fp: 252, fn: 4, sum: 800
+fold: 2, epoch: 0
+acc: 0.680, pre: 0.610, rec: 1.000, f1s: 0.758, tnr: 0.360, tp: 400, tn: 144, fp: 256, fn: 0, sum: 800
+fold: 2, epoch: 1
+acc: 0.706, pre: 0.630, rec: 1.000, f1s: 0.773, tnr: 0.412, tp: 400, tn: 165, fp: 235, fn: 0, sum: 800
+fold: 2, epoch: 2
+acc: 0.786, pre: 0.707, rec: 0.978, f1s: 0.821, tnr: 0.595, tp: 391, tn: 238, fp: 162, fn: 9, sum: 800
+fold: 3, epoch: 0
+acc: 0.719, pre: 0.640, rec: 1.000, f1s: 0.780, tnr: 0.438, tp: 400, tn: 175, fp: 225, fn: 0, sum: 800
+fold: 3, epoch: 1
+acc: 0.770, pre: 0.685, rec: 1.000, f1s: 0.813, tnr: 0.540, tp: 400, tn: 216, fp: 184, fn: 0, sum: 800
+fold: 3, epoch: 2
+acc: 0.755, pre: 0.671, rec: 1.000, f1s: 0.803, tnr: 0.510, tp: 400, tn: 204, fp: 196, fn: 0, sum: 800
+fold: 4, epoch: 0
+acc: 0.863, pre: 0.788, rec: 0.993, f1s: 0.878, tnr: 0.733, tp: 397, tn: 293, fp: 107, fn: 3, sum: 800
+fold: 4, epoch: 1
+acc: 0.744, pre: 0.661, rec: 1.000, f1s: 0.796, tnr: 0.487, tp: 400, tn: 195, fp: 205, fn: 0, sum: 800
+fold: 4, epoch: 2
+acc: 0.700, pre: 0.625, rec: 1.000, f1s: 0.769, tnr: 0.400, tp: 400, tn: 160, fp: 240, fn: 0, sum: 800
+start_time: 10:16:09.422725, end_time: 10:29:00.796606, time_diff: 0:12:51.373881
+model name: miniLMv2_L6, dataset: X_fr_y_fr
+fold: 0, epoch: 0
+acc: 0.606, pre: 0.612, rec: 0.580, f1s: 0.596, tnr: 0.632, tp: 232, tn: 253, fp: 147, fn: 168, sum: 800
+fold: 0, epoch: 1
+acc: 0.616, pre: 0.573, rec: 0.912, f1s: 0.704, tnr: 0.320, tp: 365, tn: 128, fp: 272, fn: 35, sum: 800
+fold: 0, epoch: 2
+acc: 0.770, pre: 0.855, rec: 0.650, f1s: 0.739, tnr: 0.890, tp: 260, tn: 356, fp: 44, fn: 140, sum: 800
+fold: 1, epoch: 0
+acc: 0.826, pre: 0.892, rec: 0.743, f1s: 0.810, tnr: 0.910, tp: 297, tn: 364, fp: 36, fn: 103, sum: 800
+fold: 1, epoch: 1
+acc: 0.863, pre: 0.924, rec: 0.790, f1s: 0.852, tnr: 0.935, tp: 316, tn: 374, fp: 26, fn: 84, sum: 800
+fold: 1, epoch: 2
+acc: 0.756, pre: 0.940, rec: 0.547, f1s: 0.692, tnr: 0.965, tp: 219, tn: 386, fp: 14, fn: 181, sum: 800
+fold: 2, epoch: 0
+acc: 0.855, pre: 0.958, rec: 0.743, f1s: 0.837, tnr: 0.968, tp: 297, tn: 387, fp: 13, fn: 103, sum: 800
+fold: 2, epoch: 1
+acc: 0.858, pre: 0.955, rec: 0.750, f1s: 0.840, tnr: 0.965, tp: 300, tn: 386, fp: 14, fn: 100, sum: 800
+fold: 2, epoch: 2
+acc: 0.877, pre: 0.952, rec: 0.795, f1s: 0.866, tnr: 0.960, tp: 318, tn: 384, fp: 16, fn: 82, sum: 800
+fold: 3, epoch: 0
+acc: 0.879, pre: 0.960, rec: 0.790, f1s: 0.867, tnr: 0.968, tp: 316, tn: 387, fp: 13, fn: 84, sum: 800
+fold: 3, epoch: 1
+acc: 0.874, pre: 0.907, rec: 0.833, f1s: 0.868, tnr: 0.915, tp: 333, tn: 366, fp: 34, fn: 67, sum: 800
+fold: 3, epoch: 2
+acc: 0.794, pre: 1.000, rec: 0.588, f1s: 0.740, tnr: 1.000, tp: 235, tn: 400, fp: 0, fn: 165, sum: 800
+fold: 4, epoch: 0
+acc: 0.905, pre: 0.988, rec: 0.820, f1s: 0.896, tnr: 0.990, tp: 328, tn: 396, fp: 4, fn: 72, sum: 800
+fold: 4, epoch: 1
+acc: 0.855, pre: 0.997, rec: 0.713, f1s: 0.831, tnr: 0.998, tp: 285, tn: 399, fp: 1, fn: 115, sum: 800
+fold: 4, epoch: 2
+acc: 0.946, pre: 0.952, rec: 0.940, f1s: 0.946, tnr: 0.953, tp: 376, tn: 381, fp: 19, fn: 24, sum: 800
+start_time: 10:29:00.804547, end_time: 10:35:26.379805, time_diff: 0:06:25.575258
+model name: miniLM_L12, dataset: X_de_y_de
+fold: 0, epoch: 0
+acc: 0.836, pre: 0.789, rec: 0.917, f1s: 0.849, tnr: 0.755, tp: 367, tn: 302, fp: 98, fn: 33, sum: 800
+fold: 0, epoch: 1
+acc: 0.858, pre: 0.878, rec: 0.830, f1s: 0.853, tnr: 0.885, tp: 332, tn: 354, fp: 46, fn: 68, sum: 800
+fold: 0, epoch: 2
+acc: 0.756, pre: 0.986, rec: 0.520, f1s: 0.681, tnr: 0.993, tp: 208, tn: 397, fp: 3, fn: 192, sum: 800
+fold: 1, epoch: 0
+acc: 0.774, pre: 0.995, rec: 0.550, f1s: 0.709, tnr: 0.998, tp: 220, tn: 399, fp: 1, fn: 180, sum: 800
+fold: 1, epoch: 1
+acc: 0.855, pre: 0.933, rec: 0.765, f1s: 0.841, tnr: 0.945, tp: 306, tn: 378, fp: 22, fn: 94, sum: 800
+fold: 1, epoch: 2
+acc: 0.814, pre: 0.967, rec: 0.650, f1s: 0.777, tnr: 0.978, tp: 260, tn: 391, fp: 9, fn: 140, sum: 800
+fold: 2, epoch: 0
+acc: 0.785, pre: 1.000, rec: 0.570, f1s: 0.726, tnr: 1.000, tp: 228, tn: 400, fp: 0, fn: 172, sum: 800
+fold: 2, epoch: 1
+acc: 0.781, pre: 1.000, rec: 0.562, f1s: 0.720, tnr: 1.000, tp: 225, tn: 400, fp: 0, fn: 175, sum: 800
+fold: 2, epoch: 2
+acc: 0.779, pre: 1.000, rec: 0.557, f1s: 0.716, tnr: 1.000, tp: 223, tn: 400, fp: 0, fn: 177, sum: 800
+fold: 3, epoch: 0
+acc: 0.772, pre: 1.000, rec: 0.545, f1s: 0.706, tnr: 1.000, tp: 218, tn: 400, fp: 0, fn: 182, sum: 800
+fold: 3, epoch: 1
+acc: 0.759, pre: 1.000, rec: 0.517, f1s: 0.682, tnr: 1.000, tp: 207, tn: 400, fp: 0, fn: 193, sum: 800
+fold: 3, epoch: 2
+acc: 0.816, pre: 0.996, rec: 0.635, f1s: 0.776, tnr: 0.998, tp: 254, tn: 399, fp: 1, fn: 146, sum: 800
+fold: 4, epoch: 0
+acc: 0.729, pre: 0.995, rec: 0.460, f1s: 0.629, tnr: 0.998, tp: 184, tn: 399, fp: 1, fn: 216, sum: 800
+fold: 4, epoch: 1
+acc: 0.855, pre: 0.983, rec: 0.723, f1s: 0.833, tnr: 0.988, tp: 289, tn: 395, fp: 5, fn: 111, sum: 800
+fold: 4, epoch: 2
+acc: 0.796, pre: 1.000, rec: 0.593, f1s: 0.744, tnr: 1.000, tp: 237, tn: 400, fp: 0, fn: 163, sum: 800
+start_time: 10:35:26.393984, end_time: 10:48:17.045919, time_diff: 0:12:50.651935
+model name: miniLMv2_L12, dataset: X_de_y_de
+fold: 0, epoch: 0
+acc: 0.603, pre: 0.988, rec: 0.207, f1s: 0.343, tnr: 0.998, tp: 83, tn: 399, fp: 1, fn: 317, sum: 800
+fold: 0, epoch: 1
+acc: 0.802, pre: 0.920, rec: 0.662, f1s: 0.770, tnr: 0.943, tp: 265, tn: 377, fp: 23, fn: 135, sum: 800
+fold: 0, epoch: 2
+acc: 0.834, pre: 0.916, rec: 0.735, f1s: 0.816, tnr: 0.932, tp: 294, tn: 373, fp: 27, fn: 106, sum: 800
+fold: 1, epoch: 0
+acc: 0.905, pre: 0.982, rec: 0.825, f1s: 0.897, tnr: 0.985, tp: 330, tn: 394, fp: 6, fn: 70, sum: 800
+fold: 1, epoch: 1
+acc: 0.919, pre: 0.951, rec: 0.882, f1s: 0.916, tnr: 0.955, tp: 353, tn: 382, fp: 18, fn: 47, sum: 800
+fold: 1, epoch: 2
+acc: 0.812, pre: 1.000, rec: 0.625, f1s: 0.769, tnr: 1.000, tp: 250, tn: 400, fp: 0, fn: 150, sum: 800
+fold: 2, epoch: 0
+acc: 0.855, pre: 0.993, rec: 0.715, f1s: 0.831, tnr: 0.995, tp: 286, tn: 398, fp: 2, fn: 114, sum: 800
+fold: 2, epoch: 1
+acc: 0.826, pre: 0.996, rec: 0.655, f1s: 0.790, tnr: 0.998, tp: 262, tn: 399, fp: 1, fn: 138, sum: 800
+fold: 2, epoch: 2
+acc: 0.806, pre: 1.000, rec: 0.613, f1s: 0.760, tnr: 1.000, tp: 245, tn: 400, fp: 0, fn: 155, sum: 800
+fold: 3, epoch: 0
+acc: 0.875, pre: 0.993, rec: 0.755, f1s: 0.858, tnr: 0.995, tp: 302, tn: 398, fp: 2, fn: 98, sum: 800
+fold: 3, epoch: 1
+acc: 0.943, pre: 0.947, rec: 0.938, f1s: 0.942, tnr: 0.948, tp: 375, tn: 379, fp: 21, fn: 25, sum: 800
+fold: 3, epoch: 2
+acc: 0.796, pre: 1.000, rec: 0.593, f1s: 0.744, tnr: 1.000, tp: 237, tn: 400, fp: 0, fn: 163, sum: 800
+fold: 4, epoch: 0
+acc: 0.945, pre: 0.978, rec: 0.910, f1s: 0.943, tnr: 0.980, tp: 364, tn: 392, fp: 8, fn: 36, sum: 800
+fold: 4, epoch: 1
+acc: 0.810, pre: 1.000, rec: 0.620, f1s: 0.765, tnr: 1.000, tp: 248, tn: 400, fp: 0, fn: 152, sum: 800
+fold: 4, epoch: 2
+acc: 0.904, pre: 1.000, rec: 0.807, f1s: 0.893, tnr: 1.000, tp: 323, tn: 400, fp: 0, fn: 77, sum: 800
+start_time: 10:48:17.059797, end_time: 11:01:08.874800, time_diff: 0:12:51.815003
+model name: miniLMv2_L6, dataset: X_de_y_de
+fold: 0, epoch: 0
+acc: 0.539, pre: 0.558, rec: 0.372, f1s: 0.447, tnr: 0.705, tp: 149, tn: 282, fp: 118, fn: 251, sum: 800
+fold: 0, epoch: 1
+acc: 0.627, pre: 0.611, rec: 0.703, f1s: 0.653, tnr: 0.552, tp: 281, tn: 221, fp: 179, fn: 119, sum: 800
+fold: 0, epoch: 2
+acc: 0.621, pre: 0.581, rec: 0.873, f1s: 0.697, tnr: 0.370, tp: 349, tn: 148, fp: 252, fn: 51, sum: 800
+fold: 1, epoch: 0
+acc: 0.750, pre: 0.683, rec: 0.932, f1s: 0.789, tnr: 0.568, tp: 373, tn: 227, fp: 173, fn: 27, sum: 800
+fold: 1, epoch: 1
+acc: 0.704, pre: 0.633, rec: 0.968, f1s: 0.766, tnr: 0.440, tp: 387, tn: 176, fp: 224, fn: 13, sum: 800
+fold: 1, epoch: 2
+acc: 0.782, pre: 0.741, rec: 0.868, f1s: 0.800, tnr: 0.698, tp: 347, tn: 279, fp: 121, fn: 53, sum: 800
+fold: 2, epoch: 0
+acc: 0.745, pre: 0.688, rec: 0.895, f1s: 0.778, tnr: 0.595, tp: 358, tn: 238, fp: 162, fn: 42, sum: 800
+fold: 2, epoch: 1
+acc: 0.792, pre: 0.738, rec: 0.907, f1s: 0.814, tnr: 0.677, tp: 363, tn: 271, fp: 129, fn: 37, sum: 800
+fold: 2, epoch: 2
+acc: 0.725, pre: 0.646, rec: 0.998, f1s: 0.784, tnr: 0.453, tp: 399, tn: 181, fp: 219, fn: 1, sum: 800
+fold: 3, epoch: 0
+acc: 0.787, pre: 0.744, rec: 0.877, f1s: 0.805, tnr: 0.698, tp: 351, tn: 279, fp: 121, fn: 49, sum: 800
+fold: 3, epoch: 1
+acc: 0.785, pre: 0.705, rec: 0.980, f1s: 0.820, tnr: 0.590, tp: 392, tn: 236, fp: 164, fn: 8, sum: 800
+fold: 3, epoch: 2
+acc: 0.874, pre: 0.817, rec: 0.963, f1s: 0.884, tnr: 0.785, tp: 385, tn: 314, fp: 86, fn: 15, sum: 800
+fold: 4, epoch: 0
+acc: 0.801, pre: 0.823, rec: 0.767, f1s: 0.794, tnr: 0.835, tp: 307, tn: 334, fp: 66, fn: 93, sum: 800
+fold: 4, epoch: 1
+acc: 0.824, pre: 0.747, rec: 0.980, f1s: 0.848, tnr: 0.667, tp: 392, tn: 267, fp: 133, fn: 8, sum: 800
+fold: 4, epoch: 2
+acc: 0.774, pre: 0.726, rec: 0.880, f1s: 0.795, tnr: 0.667, tp: 352, tn: 267, fp: 133, fn: 48, sum: 800
+start_time: 11:01:08.882626, end_time: 11:07:35.726789, time_diff: 0:06:26.844163

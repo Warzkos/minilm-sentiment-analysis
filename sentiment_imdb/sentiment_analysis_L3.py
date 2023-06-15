@@ -2,27 +2,22 @@ import torch
 device = torch.device('cuda')
 
 from transformers import AutoTokenizer, pipeline, AutoModelForSequenceClassification
-from datasets import load_dataset
-import numpy as np
-from torch.utils.data import Dataset
-from torch.utils.data import DataLoader
-from transformers import AdamW
-from sklearn.model_selection import StratifiedKFold
-import copy
-import csv
-import time
 
-model_name='microsoft/MiniLM-L12-H384-uncased'
+model_name='nreimers/MiniLM-L3-H384-uncased'
 
 model = AutoModelForSequenceClassification.from_pretrained(model_name)
 model.to(device)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+from datasets import load_dataset
 
 dataset = load_dataset("imdb", split='train')
 
 print(len(dataset))
 
 count = 0
+
+import numpy as np
 
 for i in range(len(dataset)):
     if dataset[i]['label'] == 1:
@@ -34,6 +29,9 @@ X = np.array(dataset['text'])
 y = np.array(dataset['label'])
 
 
+from torch.utils.data import Dataset
+
+
 class imdbDataset(Dataset):
     def __init__(self, encodings, labels):
         self.encodings = encodings
@@ -41,6 +39,7 @@ class imdbDataset(Dataset):
 
     def __getitem__(self, idx):
         item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
+        print(idx)
         item['labels'] = torch.tensor(self.labels[idx])
         return item
 
@@ -48,20 +47,26 @@ class imdbDataset(Dataset):
         return len(self.labels)
 
 
+from torch.utils.data import DataLoader
+from transformers import AdamW
+from sklearn.model_selection import StratifiedKFold
+import copy
+import numpy as np
+
  # if torch.cuda.is_available() else torch.device('cpu')
 num_epochs = 3
-batch_size = 40
+batch_size = 50
 k_folds= 5
 print('batch size= ' + str(batch_size))
 print('num of epochs per fold= '+str(num_epochs))
 print('num of folds= '+str(k_folds))
 skf = StratifiedKFold(n_splits=k_folds, random_state=1234, shuffle=True)
 loss_table=[]
-ts = time.time()
+best_acc=0
 for i, (train_index, test_index) in enumerate(skf.split(X, y)):
     print('fold' + str(i + 1))
     model.cuda()
-
+    
     train_texts = X[train_index].tolist()
     train_labels = y[train_index].tolist()
     test_texts = X[test_index].tolist()
@@ -86,14 +91,13 @@ for i, (train_index, test_index) in enumerate(skf.split(X, y)):
         print('epoch_cnt='+ str(epoch_cnt))
         epoch_cnt+=1
         for batch in train_loader:
-            if batch_cnt % (10000 // batch_size) == 0:
+            if batch_cnt % 200 == 0:
                 print('batch_cnt='+ str(batch_cnt))
             batch_cnt+=1
             optim.zero_grad()
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['labels'].to(device)
-
             outputs = model(input_ids, attention_mask=attention_mask, labels=labels)
 
             loss = outputs[0]
@@ -101,19 +105,18 @@ for i, (train_index, test_index) in enumerate(skf.split(X, y)):
             loss.backward()
             optim.step()
         print('eval')
+        acc = 0
+        tp = 0
+        tn = 0
+        fp = 0
+        fn = 0
+        occ = 0
         model.eval()
         val_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
         with torch.no_grad():
-            acc = 0
-            tp = 0
-            tn = 0
-            fp = 0
-            fn = 0
-            occ = 0
             for batch in val_loader:
                 input_ids = batch['input_ids'].to(device)
                 labels = batch['labels'].to(device)
-
                 target = model(input_ids, labels=labels)
                 table = torch.nn.functional.softmax(target['logits'], dim=1)
                 eval_arr=[]
@@ -141,13 +144,21 @@ for i, (train_index, test_index) in enumerate(skf.split(X, y)):
             print('validation rec= '+str(rec))
             print('validation f1=  '+str(2*prec*rec/(prec+rec)))
             print('validation tnr= '+ str(tn/(tn+fp)))
+            print(f'tp={tp}, fp={fp}, fn={fn}, tn={tn}, total occurances={occ}')
+        if(acc > best_acc):
+            print('best validation acc so far fold_'+str(i+1)+'_epoch_'+str(epoch+1))
+            torch.save(model.state_dict(), '/home/s249403/projects/sentiment/sentiment_model_best_acc_L3_fold_'+str(i+1)+'_epoch_'+str(epoch+1)+'_acc_'+str(acc/occ)+'.pt') 
+            best_acc = acc
 
     loss_table.append(fold_loss)
-    torch.save(model.state_dict(), '/home/s243425/sentiment/sentiment_model_L12_bs='+str(batch_size)+'_fold_'+str(i+1)+'.pt')
+    torch.save(model.state_dict(), '/home/s249403/projects/sentiment/sentiment_model_L3_fold_'+str(i+1)+'.pt')
 
-te = time.time()
-print('duration[s] = ' + str(te - ts))
+import csv
 
-with open(f"output_bs={batch_size}.csv", "w") as f:
+import matplotlib.pyplot as plt
+plt.plot(loss_table)
+plt.savefig('L3_loss.png')
+
+with open("output_L3.csv", "w") as f:
     writer = csv.writer(f)
     writer.writerows(loss_table)

@@ -8,15 +8,15 @@ batch_size = 50
 
 print('import model')
 device = torch.device('cuda')
-model = AutoModelForSequenceClassification.from_pretrained('nreimers/MiniLM-L3-H384-uncased')
+model = AutoModelForSequenceClassification.from_pretrained('nreimers/MiniLM-L6-H384-uncased')
 
-path = '/home/s249403/projects/sentiment/sentiment_model_L3_fold_5.pt'
+path = '/home/s249403/projects/sentiment/sentiment_model_best_acc_L6_fold_2_epoch_3_acc_0.833.pt'
 print('load model ' + str(path))
 model.load_state_dict(torch.load(path))
 model.to(device)
 model.eval()
 
-tokenizer = AutoTokenizer.from_pretrained('nreimers/MiniLM-L3-H384-uncased')
+tokenizer = AutoTokenizer.from_pretrained('nreimers/MiniLM-L6-H384-uncased')
 
 print('loading dataset')
 #imdb dataset
@@ -83,3 +83,4 @@ with torch.no_grad():
     print('validation rec= '+str(rec))
     print('validation f1=  '+str(2*prec*rec/(prec+rec)))
     print('validation tnr= '+ str(tn/(tn+fp)))
+    print(f'tp: {tp}, fp: {fp}, fn: {fn}, tn: {tn}')

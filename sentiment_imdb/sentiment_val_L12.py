@@ -10,7 +10,7 @@ print('import model')
 device = torch.device('cuda')
 model = AutoModelForSequenceClassification.from_pretrained('microsoft/MiniLM-L12-H384-uncased')
 
-path = '/home/s249403/projects/sentiment/sentiment_model_L12_fold_5.pt'
+path = '/home/s249403/projects/sentiment/sentiment_model_best_acc_L12_fold_2_epoch_1_acc_0.9618.pt'
 print('load model ' + str(path))
 model.load_state_dict(torch.load(path))
 model.to(device)
@@ -83,3 +83,4 @@ with torch.no_grad():
     print('validation rec= '+str(rec))
     print('validation f1=  '+str(2*prec*rec/(prec+rec)))
     print('validation tnr= '+ str(tn/(tn+fp)))
+    print(f'tp: {tp}, fp: {fp}, fn: {fn}, tn: {tn}')
